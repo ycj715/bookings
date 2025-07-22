@@ -6,9 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ycj715/bookings/pkg/config"
-	"github.com/ycj715/bookings/pkg/models"
-	"github.com/ycj715/bookings/pkg/render"
+	"github.com/ycj715/bookings/internal/config"
+	"github.com/ycj715/bookings/internal/models"
+	"github.com/ycj715/bookings/internal/render"
 )
 
 // Repo the repository used by the handlers
