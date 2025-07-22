@@ -3,13 +3,14 @@ package render
 import (
 	"bytes"
 	"fmt"
-	"github.com/justinas/nosurf"
-	"github.com/ycj715/bookings/internal/config"
-	"github.com/ycj715/bookings/internal/models"
 	"html/template"
 	"log"
 	"net/http"
 	"path/filepath"
+
+	"github.com/justinas/nosurf"
+	"github.com/ycj715/bookings/internal/config"
+	"github.com/ycj715/bookings/internal/models"
 )
 
 var functions = template.FuncMap{}
@@ -53,12 +54,10 @@ func RenderTemplate(w http.ResponseWriter, r *http.Request, tmpl string, td *mod
 	if err != nil {
 		fmt.Println("error writing template to browser", err)
 	}
-
 }
 
 // CreateTemplateCache creates a template cache as a map
 func CreateTemplateCache() (map[string]*template.Template, error) {
-
 	myCache := map[string]*template.Template{}
 
 	pages, err := filepath.Glob("./templates/*.page.tmpl")
